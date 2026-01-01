@@ -461,7 +461,7 @@ setInterval(()=>{
 if ("serviceWorker" in navigator) {
   let newWorker;
 
-  navigator.serviceWorker.register("sw.js");
+  navigator.serviceWorker.register("service-worker.js");
 
   navigator.serviceWorker.getRegistration().then(reg => {
     if (!reg) return;
