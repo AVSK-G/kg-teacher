@@ -2,9 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KG टीचर</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#5bbcff">
@@ -464,11 +462,7 @@ setInterval(()=>{
 if ("serviceWorker" in navigator) {
   let newWorker;
 
-  navigator.serviceWorker.register("service-worker.js");
-
-  navigator.serviceWorker.addEventListener("controllerchange", () => {
-    window.location.reload();
-  });
+  navigator.serviceWorker.register("sw.js");
 
   navigator.serviceWorker.getRegistration().then(reg => {
     if (!reg) return;
@@ -508,4 +502,4 @@ if ("serviceWorker" in navigator) {
 }
 </script>
 </body>
-</html>
+</html>‌
